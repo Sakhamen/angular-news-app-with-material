@@ -14,18 +14,18 @@
   <mat-sidenav #sidenav class="news-sidenav">
     <mat-list class="list-nav">
       <mat-list-item
-        class="list-item"
         *ngFor="let source of newsSources"
         (click)="searchArticles(source.id); sidenav.close()"
       >
-        <div
-          mat-card-avatar
-          [ngStyle]="{
-            'background-image': 'url(../assets/images/' + source.id + '.png)'
-          }"
-          class="news-header-image"
-        ></div>
-        <span class="source-name"> {{ source.name }}</span>
+        <img
+          matListItemAvatar
+          src="../assets/images/{{ source.id }}.png"
+          [alt]="source.name"
+        />
+        <h3 matListItemTitle>{{ source.name }}</h3>
+        <p matListItemLine class="category">
+          {{ source.category }}
+        </p>
       </mat-list-item>
     </mat-list>
   </mat-sidenav>
