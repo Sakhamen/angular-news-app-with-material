@@ -140,7 +140,6 @@
       }
     }
   },
-  "defaultProject": "news-app-angular",
   "cli": {
     "analytics": "eea2df8f-6a1e-4670-8b82-18afb8d79d69"
   }
